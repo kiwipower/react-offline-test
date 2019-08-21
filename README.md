@@ -18,11 +18,9 @@ How you decide to load and show the data is entirely up to you.
 You are free to use any libraries that you want (via `npm`) and you can choose how you wish to display the data. Some suggestions are:
 
 * Huge numbers
-* Icons with numbers
-* A pie chart (or perhaps something more creative)
+* Tiled icons and numbers
+* A chart of some kind
 * Relative sized colour bands in a giant unicorn's rainbow puke
-
-But please remember that we are looking for clean, readable, well-factored solutions, not the fanciest charting library you can find. Do not assume that a more complicated solution is better. 
 
 ## Getting started
 
@@ -35,13 +33,16 @@ But please remember that we are looking for clean, readable, well-factored solut
 Here: https://api.carbonintensity.org.uk/generation
 
 An example response is in `example_api_response.json`, where you can see that the data includes the relative percentage values of a variety of fuels
-for 1 settlement period (half hour block). A live call to the API will give you the data for the latest complete settlement period. This is absolutely fine for the purposes of this test - you do not need to worry about any larger time periods.
+for 1 settlement period (half hour block). A live call to the API will give you the data for the latest complete settlement period. This is absolutely fine for the purposes of this test - *you do not need to worry about any larger time periods*.
 
 An existing website that shows this data is here: https://gridwatch.co.uk/
 
 ### Anything else I should know?
 
-We like automated testing.
+* We are looking for a clean, readable, well-factored solution, not the fanciest charting library or middleware components you can find (or write)
+* We like automated testing 
+* A more complicated solution is rarely better than a simple one
+* Some types of chart seem like a really obvious fit but are not actually very good at showing small values in a data set 
 
 ## FAQs
 
@@ -55,4 +56,4 @@ Yes, you can use any libraries.
 
 ##### How do I submit my finished test?
 
-Let us know that you're done and we will clone it in GitHub.
+Let us (or your agent) know that you're done and we will take a look in GitHub.
