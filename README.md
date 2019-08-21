@@ -37,23 +37,21 @@ for 1 settlement period (half hour block). A live call to the API will give you 
 
 An existing website that shows this data is here: https://gridwatch.co.uk/
 
+### What are you looking for in the solution?
+
+* Clean, readable, well-factored solution, not the fanciest charting library or middleware components you can find
+* Automated tests
+* Some form of visual styling - we don't care what technology you use for this but an un-styled `ul` is not good enough
+
 ### Anything else I should know?
 
-* We are looking for a clean, readable, well-factored solution, not the fanciest charting library or middleware components you can find (or write)
-* We like automated testing 
+* You can use any ES7 features (or earlier)
+* You can use any libraries that you want
+* We really like TDD
 * A more complicated solution is rarely better than a simple one
 * Some types of chart seem like a really obvious fit but are not actually very good at showing small values in a data set 
 
-## FAQs
+## Finishing
 
-##### What language features can I use?
-
-Any ES7 features (or earlier).
-
-##### Is it OK for me to use 'helper' libraries like Lodash?
-
-Yes, you can use any libraries.
-
-##### How do I submit my finished test?
-
-Let us (or your agent) know that you're done and we will take a look in GitHub.
+* If you have made any changes that require us to do more than just an `npm install` and `npm start` to run your solution then please make this clear in the readme
+* Let your agent know that you're done and we will take a look in GitHub
