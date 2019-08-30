@@ -8,7 +8,7 @@ We ask our JavaScript candidates to take this test as part of our recruitment pr
 
 Your task is to write a React application that displays the current mix of energy generation in the UK (i.e. how much nuclear, wind, solar etc.).
 
-We have provided an empty React app to get you started. We have also included details about an existing API that you can call to load the data that you should display. 
+We have provided an empty React app to get you started - it is pre-configured with Babel and Webpack to get you up and running with no fuss. Details of an API that you can call to load the data that you should display are provided below. 
 
 ### How should it work?
 
@@ -39,7 +39,7 @@ An existing website that shows this data is here: https://gridwatch.co.uk/
 
 ### What are you looking for in the solution?
 
-* Clean, readable, well-factored solution, not the fanciest charting library or middleware components you can find
+* A simple, readable, well-factored solution - not the fanciest charting library or middleware components you can find
 * Automated tests
 * Some form of visual styling - we don't care what technology you use for this but an un-styled `ul` is not good enough
 
@@ -47,6 +47,7 @@ An existing website that shows this data is here: https://gridwatch.co.uk/
 
 * You can use any ES7 features (or earlier)
 * You can use any libraries that you want
+* `npm start` will start a Webpack hot-reload dev server so you can make live changes
 * We really like TDD
 * A more complicated solution is rarely better than a simple one
 * Some types of chart seem like a really obvious fit but are not actually very good at showing small values in a data set 
