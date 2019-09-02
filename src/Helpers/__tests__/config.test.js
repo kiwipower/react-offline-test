@@ -1,4 +1,4 @@
-import config from './config';
+import config from '../config';
 /**
  * Checks str is a valid url or not
  * @param {String} str input str to be checked
