@@ -1,0 +1,7 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Unit tests for the withEnergyContext - Tests are similar to EnergyContext tests Visual Snapshot testing (Functional testing have been done in EnergyContext.test.js) Renders without crashing 1`] = `
+<div>
+  {"loading":false,"failed":false,"energy":{"data":{"generationmix":[{"fuel":"testFuel1","perc":10},{"fuel":"testFuel2","perc":20}]}}}
+</div>
+`;

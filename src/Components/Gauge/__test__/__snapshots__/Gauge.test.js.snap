@@ -1,0 +1,136 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Unit tests for the Gauge Component Visual Snapshot testing Renders without crashing 1`] = `
+.c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  line-height: 1;
+  font-weight: 300;
+  font-size: 1.5em;
+  font-family: 'Lato',sans-serif;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  margin: 10px;
+  background-color: #ffffff;
+}
+
+.c1 {
+  margin: 10px;
+  border: 1px solid #ffffff;
+  border-radius: 3px;
+  background-color: #ffffff;
+}
+
+.c2 {
+  position: relative;
+  display: inline-block;
+}
+
+.c3 {
+  -webkit-transform: rotate(-90deg);
+  -ms-transform: rotate(-90deg);
+  transform: rotate(-90deg);
+  fill: none;
+  stroke-linecap: round;
+}
+
+.c4 {
+  stroke: #e6e6e6;
+}
+
+.c5 {
+  stroke: #65c3de;
+}
+
+.c6 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  height: 100%;
+}
+
+.c7 {
+  margin-top: 4px;
+}
+
+<div
+  class="c0"
+  data-testid="gauge"
+>
+  <div
+    class="c1"
+    data-testid="gauge-modal"
+  >
+    <div
+      class="c2"
+    >
+      <svg
+        class="c3"
+        height="120"
+        viewBox="0 0 120 120"
+        width="120"
+      >
+        <circle
+          class="c4"
+          cx="60"
+          cy="60"
+          r="54"
+          stroke-width="12"
+        />
+        <circle
+          class="c5"
+          cx="60"
+          cy="60"
+          r="54"
+          stroke-dasharray="339.29200658769764"
+          stroke-width="12"
+          style="stroke-dashoffset: 339.29200658769764;"
+        />
+      </svg>
+      <div
+        class=""
+      >
+        <div
+          class="c6"
+        >
+          0
+          %
+        </div>
+      </div>
+    </div>
+  </div>
+  <input
+    class="c7"
+    data-testid="gauge-input"
+    max="100"
+    min="0"
+    readonly=""
+    type="range"
+    value="0"
+  />
+</div>
+`;

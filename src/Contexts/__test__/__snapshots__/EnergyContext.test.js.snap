@@ -1,0 +1,3 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Unit tests for the EnergyContext Visual Snapshot testing Renders without crashing 1`] = `{"loading":false,"failed":false,"energy":{"data":{"generationmix":[{"fuel":"testFuel1","perc":10},{"fuel":"testFuel2","perc":20}]}}}`;
