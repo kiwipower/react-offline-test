@@ -1,4 +1,4 @@
-import axios from './axios';
+import axios from '../axios';
 
 describe('axios', () => {
   it('should set default headers', () => {
