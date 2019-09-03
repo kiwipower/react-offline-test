@@ -25,7 +25,7 @@ You are free to use any libraries that you want (via `npm`) and you can choose h
 ## Getting started
 
 * Get the dependencies - `npm install`
-* Run the app - `npm start` - it will be available at https://localhost:8080
+* Run the app - `npm start` - it will be available at http://localhost:8080
 * Write your code, starting with `app.jsx`
 
 ### Where can I find the UK energy generation data?
