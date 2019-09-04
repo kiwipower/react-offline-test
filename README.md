@@ -53,11 +53,12 @@ An existing website that shows this data is here: https://gridwatch.co.uk/
 ### Anything else I should know?
 
 * You can use any ES7 features (or earlier)
+* You can use TypeScript if you prefer (this project is already configured for this)
 * You can use any libraries that you want
 * `npm start` will start a Webpack hot-reload dev server so you can make live changes
 * We really like TDD
 * We like TypeScript too
-* A more complicated solution is rarely better than a simple one
+* We like simplicity - a more complicated solution is rarely better than a simple one
 * Some types of chart seem like a really obvious fit but are not actually very good at showing small values in a data set 
 
 ## Finishing
