@@ -1,5 +1,11 @@
 # React Offline Test
 
+## TLDR
+
+* This README describes the test - read it
+* **Everything** you need to know is in this readme
+* Definitely read the 'What are you looking for in the solution?' bit
+
 ## What is this?
 
 We ask our JavaScript candidates to take this test as part of our recruitment process. This is step one. If we like your submission we will invite you in for (probably one) technical interview where we will have a chat and ask you to do some pair programming. 
@@ -24,6 +30,7 @@ You are free to use any libraries that you want (via `npm`) and you can choose h
 
 ## Getting started
 
+* If you haven't already, fork our GitHub project
 * Get the dependencies - `npm install`
 * Run the app - `npm start` - it will be available at http://localhost:8080
 * Write your code, starting with `app.jsx`
@@ -39,9 +46,9 @@ An existing website that shows this data is here: https://gridwatch.co.uk/
 
 ### What are you looking for in the solution?
 
-* A simple, readable, well-factored solution - not the fanciest charting library or middleware components you can find
-* Automated tests
-* Some form of visual styling - we don't care what technology you use for this but an un-styled `ul` is not good enough
+* A **simple**, **readable**, **well-factored** solution - not the fanciest charting library or middleware components you can find
+* **Automated tests**
+* Some form of visual styling - we don't care what technology you use for this but an un-styled `ul` is not going to cut it
 
 ### Anything else I should know?
 
