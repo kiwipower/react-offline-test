@@ -1,0 +1,13 @@
+
+body {
+    padding: 0;
+}
+
+.generator-item {
+    border: 1px solid #efefef;
+    padding: 1em;
+}
+
+.generator-item + .generator-item {
+    margin-top: 1em;
+}

@@ -11,7 +11,7 @@ module.exports = {
     target: 'web',
     entry: {
         app: [
-            './index.js'
+            './index.ts'
         ],
     },
     output: {
@@ -21,14 +21,14 @@ module.exports = {
     },
     resolve: {
         mainFields: ['browser', 'module', 'main'],
-        extensions: ['.js', '.json', '.jsx']
+        extensions: ['.js', '.json', '.jsx', '.ts', '.tsx']
     },
     module: {
         rules: [
             {
-                test: /\.js(x?)$/,
+                test: /\.(t|j)s(x?)$/,
                 exclude: /node_modules/,
-                use: 'babel-loader',
+                use: 'ts-loader',
             },
             {
                 test: /\.css$/,
