@@ -7,45 +7,27 @@ body {
     font-family: 'Open Sans', sans-serif;
 }
 
-.bar-chart {
-
-}
-
-.chart-item {
-}
 .chart-item + .chart-item {
+    margin-top: 2em;
 }
-.chart-item__bar {
-    width: 30px;
-    height: 150px;
-    margin: 0 auto;
-    display: flex;
-    align-items: flex-end;
-}
-.chart-item__bar-line {
-    width: 30px;
-    height: 100%;
-    background-color: #999;
-}
+
 .chart-item__label {
-    margin-top: 10px;
-    font-size: 0.8em;
-    text-align: center;
+    font-size: 0.9em;
+    text-align: right;
 }
-.chart-item__label > span {
-    font-weight: bold;
-    margin-right: 5px;
+.chart-item__perc {
+    font-size: 0.9em;
+    color: #999;
+    text-align: center;
+    font-family: 'Jomolhari', serif;
 }
 
 .date-container {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
     position: relative;
+    margin: 2em 0;
 }
+
 .date-container__item {
-    width: 200px;
     text-align: center;
     color: tomato;
 }
