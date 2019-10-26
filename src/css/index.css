@@ -7,6 +7,13 @@ body {
     font-family: 'Open Sans', sans-serif;
 }
 
+.loading {
+    min-height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .chart-item + .chart-item {
     margin-top: 2em;
 }
@@ -14,6 +21,7 @@ body {
 .chart-item__label {
     font-size: 0.9em;
     text-align: right;
+    text-transform: capitalize;
 }
 .chart-item__perc {
     font-size: 0.9em;

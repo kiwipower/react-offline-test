@@ -1,21 +1,24 @@
 
-import React, { useState, useEffect } from 'react'
-import { format, parseISO } from 'date-fns';
+import React, { useState, useEffect, Fragment } from 'react'
 
 import loadGeneratorData, { GenerationmixData } from '../utils/loadGeneratorData';
 import config from '../config';
-import { toCapitalize } from "../utils/textUtils";
+import handleError from '../utils/handleError';
+
+import DateSpanViewer from "./DateSpanViewer";
+import GenerationMixItem from "./GenerationMixItem";
+import Loading from "./Loading";
+
+const loadingImg = require('../img/loading.svg');
 
 export default function PercentageChart() {
 
     const [loading, setLoading] = useState(false);
     const [percentageData, setPercentageData] = useState<GenerationmixData | null>(null);
+    const [errorMessage, setErrorMessage] = useState('');
 
     useEffect(() => {
         loadData();
-        return () => {
-            
-        };
     }, [])
 
     const loadData = async () => {
@@ -23,41 +26,66 @@ export default function PercentageChart() {
             return;
         }
         setLoading(true);
-        const response = await loadGeneratorData();
-        if (response !== null) {
-            const newData: GenerationmixData = {
-                data: {
-                    ...response.data,
-                    generationmix: response.data.generationmix.sort((a, b) => {
-                        return a.perc < b.perc ? 1 : -1;
-                    })
-                }
-            };
-            setPercentageData(newData);
+        try {
+            const response = await loadGeneratorData();
+            if (response) {
+                const newData: GenerationmixData = {
+                    data: {
+                        ...response.data,
+                        generationmix: response.data.generationmix.sort((a, b) => {
+                            return a.perc < b.perc ? 1 : -1;
+                        })
+                    }
+                };
+                setPercentageData(newData);
+            }
+        } catch (error) {
+            setErrorMessage(error);
+            handleError(error);
         }
         setLoading(false);
     }
 
     const refreshData = (e: React.MouseEvent<HTMLAnchorElement, MouseEvent>) => {
-        // e.preventDefault();
+        e.preventDefault();
         loadData();
     };
 
-    if (loading) {
+    const renderContent = () => {
+        if (loading) {
+            return (<Loading />);
+        }
+    
+        if (errorMessage !== '') {
+            return (
+                <div className="alert alert-danger">
+                    {errorMessage}
+                </div>
+            );
+        }
+
+        if (percentageData === null) {
+            return null;
+        }
+
         return (
-            <p>
-                Loading please wait...
-            </p>
-        )
+            <Fragment>
+                <div className=" card date-container">
+                    <DateSpanViewer 
+                        from={percentageData.data.from}
+                        to={percentageData.data.to} />
+                </div>
+                <div className="bar-chart">
+                    {percentageData.data.generationmix.map((gdata, i) => {
+                        const key = `data-${i}`;
+                        const color = config.barColors[i];
+                        return (<GenerationMixItem key={key}
+                                    gdata={gdata} color={color} />)
+                    })}
+                </div>
+            </Fragment>
+        );
     }
-
-    if (percentageData === null) {
-        return (<div>no data</div>);
-    }
-
-    const dateFormat = 'dd-MM-yyy HH.mm';
-    const fromParsed =  parseISO(percentageData.data.from);
-    const toParsed =  parseISO(percentageData.data.to);
 
     return (
         <div>
@@ -66,52 +94,7 @@ export default function PercentageChart() {
                     Refresh Data
                 </a>
             </div>
-            <div className=" card date-container">
-                <div className="card-body">
-                    <div className="row justify-content-center">
-                        <div className="col-sm-2 date-container__item">
-                            {format(fromParsed, 'dd-MM-yyy')}
-                            <span>{format(fromParsed, 'HH:mm')}</span>
-                        </div>
-                        <div className="col-sm-2 date-container__item">
-                            {format(toParsed, 'dd-MM-yyy')}
-                            <span>{format(toParsed, 'HH:mm')}</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div className="bar-chart">
-                {percentageData.data.generationmix.map((gdata, i) => {
-                    const key = `data-${i}`;
-                    const style = {
-                        width: gdata.perc + '%',
-                        backgroundColor: config.barColors[i],
-                    }
-                    return (
-                        <div key={key} id={key} className="chart-item row">
-                            <div className="col-sm-2 chart-item__label">
-                                {toCapitalize(gdata.fuel)} 
-                            </div>
-                            <div className="col-sm-1 chart-item__perc">
-                                <span>({gdata.perc}%)</span>
-                            </div>
-                            <div className="col-sm-9">
-                                <div className="progress">
-                                    <div className="progress-bar" role="progressbar" 
-                                            style={style} 
-                                            aria-valuenow={gdata.perc} 
-                                            aria-valuemin={0} 
-                                            aria-valuemax={100}>
-                                            
-                                    </div>
-                                </div>
-                            </div>
-                            
-                        </div>
-                    )
-                })}
-            </div>
+            {renderContent()}
         </div>
     )
 }
