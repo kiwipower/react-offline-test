@@ -5,6 +5,7 @@
     "start": "webpack-dev-server --hot --progress --colors"
   },
   "dependencies": {
+    "date-fns": "^2.6.0",
     "react": "^16.9.0",
     "react-dom": "^16.9.0"
   },

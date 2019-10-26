@@ -8,8 +8,8 @@ export interface GeneratorPercentageItem {
 
 export interface GenerationmixData {
     data: {
-        from: Date;
-        to: Date;
+        from: string;
+        to: string;
         generationmix: GeneratorPercentageItem[];
     }
 }

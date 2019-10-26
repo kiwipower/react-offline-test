@@ -1,13 +1,60 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700');
+@import url('https://fonts.googleapis.com/css?family=Jomolhari&display=swap');
 
 body {
     padding: 0;
+    background-color: #efefef;
+    font-family: 'Open Sans', sans-serif;
 }
 
-.generator-item {
-    border: 1px solid #efefef;
-    padding: 1em;
+.bar-chart {
+
 }
 
-.generator-item + .generator-item {
-    margin-top: 1em;
+.chart-item {
+}
+.chart-item + .chart-item {
+}
+.chart-item__bar {
+    width: 30px;
+    height: 150px;
+    margin: 0 auto;
+    display: flex;
+    align-items: flex-end;
+}
+.chart-item__bar-line {
+    width: 30px;
+    height: 100%;
+    background-color: #999;
+}
+.chart-item__label {
+    margin-top: 10px;
+    font-size: 0.8em;
+    text-align: center;
+}
+.chart-item__label > span {
+    font-weight: bold;
+    margin-right: 5px;
+}
+
+.date-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+.date-container__item {
+    width: 200px;
+    text-align: center;
+    color: tomato;
+}
+.date-container__item span {
+    display: block;
+    font-size: 2em;
+    font-family: 'Jomolhari', serif;
+}
+
+.date-container__item + .date-container__item {
+    border-left: 1px solid #ccc;
 }
