@@ -9,8 +9,6 @@ import DateSpanViewer from "./DateSpanViewer";
 import GenerationMixItem from "./GenerationMixItem";
 import Loading from "./Loading";
 
-const loadingImg = require('../img/loading.svg');
-
 export default function PercentageChart() {
 
     const [loading, setLoading] = useState(false);
@@ -90,8 +88,10 @@ export default function PercentageChart() {
     return (
         <div>
             <div className="row my-4 justify-content-center">
-                <a className="btn btn-outline-primary" href="" onClick={refreshData}>
-                    Refresh Data
+                <a className={'btn btn-outline-primary ' + loading || ' btn-disabled'} 
+                    id="refresh-data-button"
+                    href="" onClick={refreshData}>
+                    {loading ? 'Loading...' : 'Refresh Data'} 
                 </a>
             </div>
             {renderContent()}
