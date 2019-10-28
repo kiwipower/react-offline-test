@@ -33,4 +33,3 @@ Jest and enzyme have been used for unit test purpose. For start test in watch mo
 npm run test:watch
 ```
 
-one time execution can be done with  "npm test".
