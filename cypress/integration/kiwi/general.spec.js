@@ -2,16 +2,6 @@
 
 const url = 'http://localhost:8080';
 
-// Cypress.on('window:before:load', (win) => {
-//     const _consoleInfo = win.console.info
-//     win.console.info = function () {
-//         if (arguments[0].includes('App updated.')) {
-//             cy.$$('.restart', top.document).click()
-//         }
-//         return _consoleInfo.apply(win.console, arguments)
-//     }
-// })
-
 context('General test', () => {
     beforeEach(() => {
         cy.wait(1000)
@@ -35,7 +25,6 @@ context('General test', () => {
 
         cy.get('#refresh-data-button')
             .should('have.text', 'Refresh Data')
-
 
         cy.get('.bar-chart')
             .find('.chart-item')

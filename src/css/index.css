@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700');
-@import url('https://fonts.googleapis.com/css?family=Jomolhari&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Merriweather:400,700&display=swap');
 
 body {
     padding: 0;
@@ -27,7 +27,7 @@ body {
     font-size: 0.9em;
     color: #999;
     text-align: center;
-    font-family: 'Jomolhari', serif;
+    font-family: 'Merriweather', serif;
 }
 
 .date-container {
@@ -42,7 +42,7 @@ body {
 .date-container__item span {
     display: block;
     font-size: 2em;
-    font-family: 'Jomolhari', serif;
+    font-family: 'Merriweather', serif;
 }
 
 .date-container__item + .date-container__item {

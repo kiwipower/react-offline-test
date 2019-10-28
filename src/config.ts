@@ -1,6 +1,6 @@
 
 export default {
-    apiUri: 'https://api.carbonintensity.org.uk/generation',
+    apiUri: 'https://api.carbonintensity.org.uk/',
     barColors: [
         'cornflowerblue', 
         'olivedrab', 

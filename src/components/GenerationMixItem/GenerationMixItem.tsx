@@ -1,7 +1,6 @@
 import React from 'react'
 
-import { GeneratorPercentageItem } from '../utils/loadGeneratorData';
-import config from '../config';
+import { GeneratorPercentageItem } from '../../services/GenerationData'
 
 interface GenerationMixItemProps {
     gdata: GeneratorPercentageItem;
