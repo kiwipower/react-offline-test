@@ -1,0 +1,24 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`PowerSource should render correctly 1`] = `
+<main
+  className="PowerSource"
+>
+  <div>
+    <img
+      alt="biomass"
+      className="biomass"
+    />
+  </div>
+  <div
+    className="percent"
+  >
+    55.9
+  </div>
+  <div
+    className="title"
+  >
+    biomass
+  </div>
+</main>
+`;

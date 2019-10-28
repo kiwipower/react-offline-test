@@ -1,0 +1,54 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Chart should render correctly 1`] = `
+<main
+  className="Chart"
+>
+  <ReactMinimalPieChart
+    animate={false}
+    animationDuration={500}
+    animationEasing="ease-out"
+    cx={50}
+    cy={50}
+    data={
+      Array [
+        Object {
+          "color": "#9400D3",
+          "title": "biomass",
+          "value": 3.6,
+        },
+        Object {
+          "color": "#4B0082",
+          "title": "wind",
+          "value": 6,
+        },
+        Object {
+          "color": "#000080",
+          "title": "solar",
+          "value": 0.3,
+        },
+      ]
+    }
+    label={[Function]}
+    labelPosition={112}
+    labelStyle={
+      Object {
+        "fontFamily": "sans-serif",
+        "fontSize": "5px",
+      }
+    }
+    lengthAngle={360}
+    lineWidth={100}
+    paddingAngle={0}
+    radius={50}
+    ratio={1}
+    rounded={false}
+    startAngle={0}
+    style={
+      Object {
+        "height": "300px",
+      }
+    }
+  />
+</main>
+`;

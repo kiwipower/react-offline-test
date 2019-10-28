@@ -1,0 +1,67 @@
+.PowerSource {
+  margin: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  @mixin power-source-size {
+    width: 64px;
+    height: auto;
+  }
+
+  .other {
+    @include power-source-size;
+    content:url('../../assets/images/power-source-icons/factory.png');
+  }
+
+  .hydro {
+    @include power-source-size;
+    content:url('../../assets/images/power-source-icons/water-drop.png');
+  }
+
+  .imports {
+    @include power-source-size;
+    content:url('../../assets/images/power-source-icons/networking.png');
+  }
+
+  .coal {
+    @include power-source-size;
+    content:url('../../assets/images/power-source-icons/wagon.png');
+  }
+
+  .nuclear {
+    @include power-source-size;
+    content:url('../../assets/images/power-source-icons/nuclear-plant.png');
+  }
+
+  .biomass {
+    @include power-source-size;
+    content:url('../../assets/images/power-source-icons/trash.png');
+  }
+
+  .wind {
+    @include power-source-size;
+    content:url('../../assets/images/power-source-icons/eolic-energy.png');
+  }
+
+  .solar {
+    @include power-source-size;
+    content:url('../../assets/images/power-source-icons/solar-panel.png');
+  }
+
+  .gas {
+    @include power-source-size;
+    content:url('../../assets/images/power-source-icons/gas.png');
+  }
+
+  .title {
+    color: #4B0082;
+    font-size: 18px;
+    font-weight: bold;
+  }
+
+  .percent {
+    font-size: 36px;
+    color: #FF7F00;
+  }
+}
