@@ -17,3 +17,5 @@ node_modules/
 
 cypress/videos
 cypress/screenshots
+
+build

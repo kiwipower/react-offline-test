@@ -13,5 +13,7 @@ describe('API response test', () => {
         expect(fetchMock.mock.calls.length).toEqual(1)
         expect(apiResponse.data.from).toBe('2019-08-12T12:30Z');
     });
+
+
 });
 
