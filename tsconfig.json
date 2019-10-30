@@ -1,15 +1,22 @@
 {
   "compilerOptions": {
     "allowJs": true,
+    "resolveJsonModule": true,
     "esModuleInterop": true,
+    "module": "commonjs",
     "sourceMap": true,
     "jsx": "react",
     "experimentalDecorators": true,
+    "moduleResolution": "node",
+    "noImplicitReturns": true,
+    "noImplicitThis": true,
+    "noImplicitAny": true,
+    "strictNullChecks": false,
     "lib": [
       "dom",
       "es2017"
     ],
     "outDir": "./build"
   },
-  "exclude": ["build"]
+  "exclude": ["build", "node_modules"]
 }
