@@ -1,11 +1,13 @@
-import React from "react";
-import energyApi from "../../api/EnergyApi";
-import BarChart from "./BarChart";
+import * as React from "react";
+import { ErrorMessage, LoadingSpinner } from "../shared";
+import Charts from "./BarChartGraph";
+import energyApi from "../../api/energyApi";
+import "./Dashbord.css";
 
-interface MixedDataState {
+interface Energy {
   from: string;
   to: string;
-  generationmix: Array<{ fuel: string; perc: string }>;
+  generationmix: Array<{ fuel: string; perc: number }>;
 }
 
 interface ErrorMessage {
@@ -13,14 +15,13 @@ interface ErrorMessage {
 }
 
 function Dashboard() {
-  const [data, setData] = React.useState<MixedDataState | null>();
+  const [energy, setEnergy] = React.useState<Energy | undefined>();
   const [error, setError] = React.useState<string | undefined>();
-  const isLoading = data === undefined && error === undefined;
 
-  const getEnrgery = () => {
-    energyApi.list().then(
-      (response: MixedDataState) => {
-        setData(response);
+  const handleFetchData = () => {
+    return energyApi.list().then(
+      (response: Energy) => {
+        setEnergy(response);
       },
       (error: ErrorMessage) => {
         setError(error.message);
@@ -29,20 +30,20 @@ function Dashboard() {
   };
 
   React.useEffect(() => {
-    getEnrgery();
+    handleFetchData();
   }, []);
 
-  if (isLoading) {
-    return <h1>Loading.....</h1>;
-  }
-
-  if (!isLoading && error) {
-    return <h1>{error}</h1>;
-  }
+  const isLoading = energy === undefined && error === undefined;
 
   return (
-    <div>
-      <BarChart generationmix={data.generationmix} />
+    <div className="container">
+      {isLoading ? (
+        <LoadingSpinner className="center-flex" isLoading={isLoading} />
+      ) : !isLoading && error ? (
+        <ErrorMessage className="center-flex" error={error} />
+      ) : (
+        <Charts energy={energy} />
+      )}
     </div>
   );
 }

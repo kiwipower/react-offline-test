@@ -10,7 +10,7 @@ interface ErrorMessage {
   message: string;
 }
 
-function EnergyApi() {
+function energyApi() {
   function list() {
     return new Promise((resolve, reject) => {
       fetch("https://api.carbonintensity.org.uk/generation")
@@ -28,4 +28,4 @@ function EnergyApi() {
   };
 }
 
-export default EnergyApi();
+export default energyApi();

@@ -1,13 +1,14 @@
 {
   "private": true,
   "scripts": {
-    "test": "jest **/*.test.js*",
+    "test": "jest",
     "start": "webpack-dev-server --hot --progress --colors"
   },
   "dependencies": {
     "css-loader": "^3.2.0",
     "react": "^16.9.0",
-    "react-dom": "^16.9.0"
+    "react-dom": "^16.9.0",
+    "recharts": "^1.8.5"
   },
   "devDependencies": {
     "@babel/core": "^7.5.5",
@@ -16,11 +17,15 @@
     "@babel/preset-env": "^7.5.5",
     "@babel/preset-react": "^7.0.0",
     "@babel/runtime": "^7.5.5",
+    "@types/enzyme-adapter-react-16": "^1.0.5",
     "@types/jest": "^24.0.18",
     "@types/react": "^16.9.11",
     "@types/react-dom": "^16.9.3",
+    "@types/recharts": "^1.8.1",
     "babel-jest": "^24.9.0",
     "babel-loader": "^8.0.6",
+    "enzyme": "^3.10.0",
+    "enzyme-adapter-react-16": "^1.15.1",
     "html-webpack-plugin": "^3.2.0",
     "jest": "^24.8.0",
     "jest-transform-stub": "^2.0.0",
@@ -41,6 +46,9 @@
     "moduleNameMapper": {
       "^.+.(css|styl|less|sass|scss|png|jpg|ttf|woff|woff2)$": "jest-transform-stub"
     },
+    "setupFilesAfterEnv": [
+      "./src/test-setup.ts"
+    ],
     "moduleFileExtensions": [
       "ts",
       "tsx",
