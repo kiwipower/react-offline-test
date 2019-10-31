@@ -1,6 +1,6 @@
 import * as React from "react";
-import { ErrorMessage, LoadingSpinner } from "../shared";
-import Charts from "./BarChartGraph";
+import { ErrorBanner, LoadingSpinner } from "../shared";
+import BarChartGraph from "./BarChartGraph";
 import energyApi from "../../api/energyApi";
 import "./Dashbord.css";
 
@@ -19,7 +19,7 @@ function Dashboard() {
   const [error, setError] = React.useState<string | undefined>();
 
   const handleFetchData = () => {
-    return energyApi.list().then(
+    energyApi.list().then(
       (response: Energy) => {
         setEnergy(response);
       },
@@ -31,7 +31,7 @@ function Dashboard() {
 
   React.useEffect(() => {
     handleFetchData();
-  }, []);
+  }, [energy]);
 
   const isLoading = energy === undefined && error === undefined;
 
@@ -40,9 +40,9 @@ function Dashboard() {
       {isLoading ? (
         <LoadingSpinner className="center-flex" isLoading={isLoading} />
       ) : !isLoading && error ? (
-        <ErrorMessage className="center-flex" error={error} />
+        <ErrorBanner className="center-flex" />
       ) : (
-        <Charts energy={energy} />
+        <BarChartGraph energy={energy} />
       )}
     </div>
   );

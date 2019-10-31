@@ -26,6 +26,15 @@ describe("<BarchartGraph />", () => {
       to: "2019-08-12T12:30Z"
     };
     const component = shallow(<BarchartGraph energy={energy} />);
+    expect(component.find("BarChart").prop("data")).toHaveLength(2);
+    expect(component.find("DateViewer").prop("from")).toEqual(
+      "2019-08-12T13:00Z"
+    );
+    expect(component.find("DateViewer").prop("to")).toEqual(
+      "2019-08-12T12:30Z"
+    );
     expect(component).toMatchSnapshot();
   });
+
+  it("render data", () => {});
 });
