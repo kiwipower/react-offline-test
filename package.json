@@ -1,7 +1,7 @@
 {
   "private": true,
   "scripts": {
-    "test": "jest **/*.test.js*",
+    "test": "jest **/*.test.*",
     "start": "webpack-dev-server --hot --progress --colors"
   },
   "dependencies": {
