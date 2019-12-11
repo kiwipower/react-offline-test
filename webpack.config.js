@@ -12,21 +12,21 @@ module.exports = {
     entry: {
         app: [
             './index.js'
-        ],
+        ]
     },
     output: {
         filename: '[name]-[hash:6].bundle.js',
         path: path.join(__dirname, './build/www'),
-        publicPath: `http://${host}:${port}/`,
+        publicPath: `http://${host}:${port}/`
     },
     resolve: {
         mainFields: ['browser', 'module', 'main'],
-        extensions: ['.js', '.json', '.jsx']
+        extensions: ['.js', '.json', '.jsx', '.ts', '.tsx']
     },
     module: {
         rules: [
             {
-                test: /\.js(x?)$/,
+                test: /\.([jt])s(x?)$/,
                 exclude: /node_modules/,
                 use: 'babel-loader',
             },
@@ -40,13 +40,13 @@ module.exports = {
             {
                 test: /\.(png|jpg|gif)$/,
                 use: 'file-loader?name=img/[name]-[hash:6].[ext]',
-            },
-        ],
+            }
+        ]
     },
     plugins: [
         new HtmlWebpackPlugin({
             filename: 'index.html',
-            template: 'index.html',
+            template: 'index.html'
         }),
         new MiniCssExtractPlugin({
             filename: '[name]-[hash:6].css',
@@ -57,6 +57,6 @@ module.exports = {
     devServer: {
         port,
         host,
-        contentBase: '/src',
+        contentBase: '/src'
     },
 };

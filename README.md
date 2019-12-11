@@ -52,7 +52,7 @@ An existing website that shows this data is here: https://gridwatch.co.uk/
 
 ### Anything else I should know?
 
-* You can use any ES7 features (or earlier)
+* You can use any JavaScript features
 * You can use TypeScript if you prefer (the project is already configured for this)
 * You can use any libraries that you want
 * `npm start` will start a Webpack hot-reload dev server so you can make live changes
