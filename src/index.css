@@ -1,0 +1,13 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  background: #efefef;
+  color: #555;
+  padding: 40px;
+  font-family: Arial;
+}
+.wrapper {
+  max-width:1140px;
+  margin: auto;
+}

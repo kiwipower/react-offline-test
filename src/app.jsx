@@ -1,7 +1,10 @@
-import React from 'react';
+import React from "react";
+import UkEnergyMix from './components/UkEnergyMix';
 
-const App = () => <h1>UK Energy Mix</h1>;
+const App = () => (
+  <UkEnergyMix />
+)
 
 export {
-    App
+  App
 }
