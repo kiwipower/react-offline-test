@@ -1,7 +1,7 @@
 import React from "react";
 import { render, unmountComponentAtNode } from "react-dom";
 import { act } from "react-dom/test-utils";
-import UkEnergyMix from "./UkEnergyMix";
+import UkEnergyMix from "./uk-energy-mix";
 
 let container = null;
 beforeEach(() => {
