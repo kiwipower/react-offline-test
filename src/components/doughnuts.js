@@ -21,7 +21,7 @@ function DoughnutsGridItem({perc, fuel}) {
         <text className="doughnut-perc-label" x="50%" y="50%">
           {perc}%
         </text>
-        <text className="doughnut-fuel-label" x="50%" y="65%">
+        <text className="doughnut-fuel-label" x="50%" y="67%">
           {fuel}
         </text>
       </svg>

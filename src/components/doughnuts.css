@@ -1,5 +1,5 @@
 .doughnuts-container {
-  margin: 0 auto;
+  margin: 0 auto 30px;
 }
 .doughnuts-grid {
   display: flex;
@@ -7,34 +7,16 @@
   justify-content: flex-start;
 }
 .doughnuts-grid-item {
-  flex-basis: 100%;
+  flex-basis: 33.3%;
   -ms-flex: auto;
-  width: 100%;
+  width: 33.3%;
   position: relative;
-  padding-bottom: 100%;
-}
-@media(min-width: 576px) {
-  .doughnuts-grid-item {
-    flex-basis: 50%;
-    padding-bottom: 50%;
-  }
-}
-@media(min-width: 768px) {
-  .doughnuts-grid-item {
-    flex-basis: 33.3%;
-    padding-bottom: 33.3%;
-  }
+  padding-bottom: 33.3%;
 }
 @media(min-width: 992px) {
   .doughnuts-grid-item {
-    flex-basis: 25%;
-    padding-bottom: 25%;
-  }
-}
-@media(min-width: 1200px) {
-   .doughnuts-grid-item {
-    flex-basis: 20%;
-    padding-bottom: 20%;
+    flex-basis: 11.1%;
+    padding-bottom: 11.1%;
   }
 }
 .doughnut-svg-container {
@@ -54,7 +36,7 @@
   font-size: 0.6em;
 }
 .doughnut-svg-container svg text.doughnut-fuel-label {
-  font-size: 0.2em;
+  font-size: 0.25em;
 }
 .doughnut-circle {
   fill:white;
@@ -67,8 +49,7 @@
   stroke-width:3.5;
   stroke-dashoffset:25;
   stroke-dasharray: 0 100;
-  -webkit-transition: stroke-dasharray 2s;
-  transition: stroke-dasharray 2s;
+  transition: stroke-dasharray 3s;
 }
 .doughnuts-grid-item:nth-child(even) .doughnut-chart {
   stroke: #9fb6cd;

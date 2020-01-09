@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import Doughnuts from "./doughnuts";
+import Bars from "./bars";
 
 export default function UkEnergyMix() {
   const [energy, setEnergy] = useState(null);
@@ -22,6 +23,7 @@ export default function UkEnergyMix() {
       <h1>Uk Energy Mix</h1>
       <p>From {energy.data.from} to {energy.data.to}</p>
       <Doughnuts generationmix={energy.data.generationmix} />
+      <Bars generationmix={energy.data.generationmix} />
     </div>
   );
 }

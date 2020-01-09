@@ -1,0 +1,50 @@
+.bars-container {
+  background: white;
+  padding: 20px;
+  border-radius:4px;
+}
+.bars-grid {
+  display: flex;
+}
+.bars-grid-item {
+  flex: 1;
+  padding:1px 5px;
+  height:32px
+}
+.bars-grid-item-sides {
+  max-width:75px;
+  line-height:30px;
+  height:30px;
+  text-align: right;
+}
+.bar {
+  display:block;
+  height:30px;
+}
+.bar-animate {
+  display:block;
+  position:relative;
+  height:100%;
+  background: slategray;
+  animation: barAnimate 3s;
+}
+.bars-grid:nth-child(even) .bar-animate {
+  background: #9fb6cd;
+}
+@keyframes barAnimate {
+    0% {
+        width: 0%;
+    }
+    100% {
+        width: 100%;
+    }
+}
+
+.bar-percentage {
+  position:absolute;
+  left:100%;
+  display:block;
+  height:30px;
+  line-height:30px;
+  padding:0 10px;
+}
