@@ -15,7 +15,7 @@ module.exports = {
         ]
     },
     output: {
-        filename: '[name]-[hash:6].bundle.js',
+        filename: '[name]-[contenthash:6].bundle.js',
         path: path.join(__dirname, './build/www'),
         publicPath: `http://${host}:${port}/`
     },
@@ -39,7 +39,7 @@ module.exports = {
             },
             {
                 test: /\.(png|jpg|gif)$/,
-                use: 'file-loader?name=img/[name]-[hash:6].[ext]',
+                use: 'file-loader?name=img/[name]-[contenthash:6].[ext]',
             }
         ]
     },
@@ -49,7 +49,7 @@ module.exports = {
             template: 'index.html'
         }),
         new MiniCssExtractPlugin({
-            filename: '[name]-[hash:6].css',
+            filename: '[name]-[contenthash:6].css',
             chunkFilename: '[id].css'
         })
     ],
