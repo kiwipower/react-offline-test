@@ -50,13 +50,12 @@ module.exports = {
         }),
         new MiniCssExtractPlugin({
             filename: '[name]-[hash:6].css',
-            chunkFilename: '[id].css',
-            debug: true
+            chunkFilename: '[id].css'
         })
     ],
     devServer: {
         port,
         host,
-        contentBase: '/src'
+        static: path.resolve(__dirname, 'src')
     },
 };
