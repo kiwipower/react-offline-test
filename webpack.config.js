@@ -11,7 +11,7 @@ module.exports = {
     target: 'web',
     entry: {
         app: [
-            './index.js'
+            './index.tsx'
         ]
     },
     output: {

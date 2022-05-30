@@ -33,7 +33,7 @@ You are free to use any libraries that you want (via `npm`) and you can choose h
 * If you haven't already, fork our GitHub project
 * Get the dependencies - `npm install`
 * Run the app - `npm start` - it will be available at http://localhost:8080
-* Write your code, starting with `app.jsx`
+* Write your code, starting with [`app.tsx`](./src/app.tsx)
 
 ### Where can I find the UK energy generation data?
 
